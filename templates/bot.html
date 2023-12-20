@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Use the Admin bot to compliment Messi in order to uncover a hidden truth</h2>
+        </div>
+
+        <div class="col-md-12">
+            <form action="/admin-bot/" method="POST">
+                <div class="mb-3">
+                    <input type="text" name="url" id="url" class="form-control" placeholder="URL goes here" />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <p>&nbsp;</p>
+            <span><center>The admin bot will <strong>only</strong> accept URLs pointing precisely to our Messi fanpage hostname.</center></span>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

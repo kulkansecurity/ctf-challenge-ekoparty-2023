@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Image on the left -->
+        <div class="col-md-4">
+            <img src="/static/messi.png" class="img-fluid rounded border border-dark p-2 shadow" alt="Lionel Messi"/>
+        </div>
+
+        <!-- Text on the right -->
+        <div class="col-md-8">
+            <h1>Welcome to our super secure Messi fanpage!</h1>
+            <div id="mesi"></div>
+            <h3>Look! A compliment engine for Messi fans!</h3>
+            <p>I sure hope that the engine isn't vulnerable.</p>
+            <h4>Example json:</h4>
+            <pre class="bg-light p-2 rounded"><code>{
+  "compliment": "Messi is such an incredible..",
+  "color": "blue",
+  "fontSize": "24px"
+}</code></pre>
+
+            <div class="my-3">
+                <label for="input_json" class="form-label">Customize the compliment:</label>
+                <input type="text" id="input_json" class="form-control" placeholder='Enter your JSON config here' />
+                <button class="btn btn-primary mt-2" onclick="applyUpdate()">Apply Update</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+		<p>&nbsp;</p>
+            <div id="compliment" class="alert alert-success" role="alert">
+                Messi is such an incredible prototype player; whereas Cristiano pollutes the game.
+            </div>
+    	</div>
+    </div>
+</div>
+
+ 
+    <script src='/static/challenge.js'></script>
+{% endblock %}
